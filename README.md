@@ -33,3 +33,6 @@ In traditional sockets networks, applications request network resources from the
 ![picture](data/TCP:IP.png)
 
 TCP/IP/Ethernet is a byte-stream oriented transport for passing bytes of information between sockets applications. TCP/IP is lossy by design but implements a reliability scheme using the Transmission Control Protocol (TCP). TCP/IP requires Operating System (OS) intervention for every operation which includes buffer copying on both ends of the wire. in byte-stream oriented networks, the idea of a message boundary is lost. When an application wants to send a packet, the OS places the bytes into an anonymous buffer in main memory belonging to the operating system and when the byte transfer is complete, the OS copies the data in its buffer into the receive buffer of the application. This process is repeated each time a packet arrives until the entire byte stream is received. TCP is responsible for retransmitting any lost packets due to congestion.
+
+
+In this project the KVell is implemented in AWS i3.large instance using Ubuntu 18.04 server. To do so, I slightly changed the configuration code to be able to run on i3.large instance, since the original KVell was executed in i3.metal instance. In addition, the aim is to implement remote client KVell. 
